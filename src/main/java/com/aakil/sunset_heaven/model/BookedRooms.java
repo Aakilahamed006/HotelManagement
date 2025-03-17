@@ -2,8 +2,6 @@ package com.aakil.sunset_heaven.model;
 
 import java.time.LocalDate;
 
-
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -32,10 +30,113 @@ public class BookedRooms {
 	@Column(name="Children")
 	private int NumOfChildren;
 	@Column(name="TotalGuset")
-	private int TotalNoGuest;
+	private int TotalNoGuest; 
 	@Column(name="Confirmation_Code")
 	private String bookingConfirmationCode;
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Rooms room;
 	
+
+
+public void calculateTotalNumberOfGuest() {
+	this.TotalNoGuest=this.NumOfAdults+this.NumOfChildren;
+}
+
+
+
+
+
+public void setRoom(Rooms room) {
+	this.room = room;
+}
+
+
+
+public void setBookingConfirmationCode(String bookingConfirmationCode) {
+	this.bookingConfirmationCode = bookingConfirmationCode;
+}
+
+
+
+
+
+public LocalDate getCheckInDate() {
+	return checkInDate;
+}
+
+
+
+
+
+public void setCheckInDate(LocalDate checkInDate) {
+	this.checkInDate = checkInDate;
+}
+
+
+
+
+
+public LocalDate getCheckOutDate() {
+	return checkOutDate;
+}
+
+
+
+
+
+public void setCheckOutDate(LocalDate checkOutDate) {
+	this.checkOutDate = checkOutDate;
+}
+
+
+
+
+
+public String getGuestFullName() {
+	return guestFullName;
+}
+
+
+
+
+
+public void setGuestFullName(String guestFullName) {
+	this.guestFullName = guestFullName;
+}
+
+
+
+
+
+public String getGuestEmail() {
+	return guestEmail;
+}
+
+
+
+
+
+public void setGuestEmail(String guestEmail) {
+	this.guestEmail = guestEmail;
+}
+
+
+
+
+
+public void setNumOfAdults(int numOfAdults) {
+	NumOfAdults = numOfAdults;
+	calculateTotalNumberOfGuest();
+}
+
+
+
+
+
+public void setNumOfChildren(int numOfChildren) {
+	NumOfChildren = numOfChildren;
+	calculateTotalNumberOfGuest();
+}
+
+
 }
