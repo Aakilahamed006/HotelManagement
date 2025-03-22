@@ -2,6 +2,7 @@ package com.aakil.sunset_heaven.service;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.SecureRandom;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Base64;
@@ -27,10 +28,30 @@ public class BookedRoomService {
 	        this.roomrepository = roomrepository;
 	    }
 	
-	public void AddBookings(BookedRooms bookedrooms) {
+	public String AddBookings(BookedRooms bookedrooms) {
+		String bookingcode=BookingCodeGenerator();
+		bookedrooms.setBookingConfirmationCode(bookingcode);
 		bookedroomrepository.save(bookedrooms);
-	}
+		return bookingcode;
+	} 
 	
+ 
+public static String BookingCodeGenerator() {
+    final String CHARACTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+    final int CODE_LENGTH = 8;
+    
+    SecureRandom random = new SecureRandom();
+    StringBuilder code = new StringBuilder(CODE_LENGTH);
+
+    for (int i = 0; i < CODE_LENGTH; i++) {
+        int index = random.nextInt(CHARACTERS.length());
+        code.append(CHARACTERS.charAt(index));
+    }
+
+    return code.toString();
+}
+	
+
 	public List <DataTransferObject> findallavailablerooms(LocalDate checkIndate,LocalDate checkOutDate){
 		return roomrepository.findAvailableRooms(checkIndate,checkOutDate).stream().map(t->{
 		try {
@@ -63,8 +84,29 @@ public class BookedRoomService {
 		        e.printStackTrace();
 		        return null;
 
+		 
+	}
+	}
+
+	public List<BookedRooms> findAllRooms() {
+		return bookedroomrepository.findAll();
 		
 	}
-	}}
+
+	public void DeleteById(Long bookingId) {
+	    bookedroomrepository.deleteById(bookingId);
+		
+	}
+	
+	
+	
+	    
+
+
+
+
+
+
+}
 
 

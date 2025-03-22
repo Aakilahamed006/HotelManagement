@@ -11,4 +11,4 @@ public interface BookedRoomRepository extends JpaRepository<BookedRooms, Long> {
     
 }
 
-
+ 

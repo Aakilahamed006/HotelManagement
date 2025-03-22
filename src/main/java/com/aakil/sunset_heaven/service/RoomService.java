@@ -2,18 +2,14 @@ package com.aakil.sunset_heaven.service;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Blob;
 import java.sql.SQLException;
 import java.util.Base64;
 import java.util.List;
 import java.util.stream.Collectors;
 
-import javax.sql.rowset.serial.SerialBlob;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.MultipartFile;
 
 import com.aakil.sunset_heaven.DTO.DataTransferObject;
 import com.aakil.sunset_heaven.model.Rooms;
@@ -119,7 +115,4 @@ public void deleteroom(int roomId) {
 	roomrepository.deleteById(roomId);
 	
 }
-
-
-
 }

@@ -84,6 +84,62 @@ public LocalDate getCheckOutDate() {
 
 
 
+public Long getBookingId() {
+	return bookingId;
+}
+
+
+
+
+
+public void setBookingId(Long bookingId) {
+	this.bookingId = bookingId;
+}
+
+
+
+
+
+public int getTotalNoGuest() {
+	return TotalNoGuest;
+}
+
+
+
+
+
+public void setTotalNoGuest(int totalNoGuest) {
+	TotalNoGuest = totalNoGuest;
+}
+
+
+
+
+
+public int getNumOfAdults() {
+	return NumOfAdults;
+}
+
+
+
+
+
+public int getNumOfChildren() {
+	return NumOfChildren;
+}
+
+
+
+
+
+public String getBookingConfirmationCode() {
+	return bookingConfirmationCode;
+}
+
+
+
+
+
 public void setCheckOutDate(LocalDate checkOutDate) {
 	this.checkOutDate = checkOutDate;
 }
