@@ -1,0 +1,166 @@
+/* Overall Container */
+.contact-container {
+    width: 100%;
+    background-color: #f7f7f7;  /* Light background to separate content */
+}
+
+/* Room Types Container */
+.room-types-container {
+    width: 90%;  /* Make the container wider */
+    margin: 30px auto;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    padding-top:1800px;  /* Adjust padding if necessary */
+}
+
+
+/* Title Styling */
+.room-types-container h2 {
+    font-size: 36px;  /* Larger size for title */
+    color: #ffee00;  /* A more yellowish gold color */
+    margin-bottom: 50px;  /* Space below title */
+    letter-spacing: 1px;
+    font-weight: 600;  /* Medium weight for better readability */
+}
+
+/* Room Cards Layout (Single Column) */
+.rooms-list {
+    display: flex;  /* Use flexbox for vertical layout */
+    flex-direction: column;  /* Stack items vertically */
+    align-items: center;  /* Center the items horizontally */
+    gap: 40px;  /* Increased gap for spacing between cards */
+    padding: 0 20px;  /* Padding for spacing */
+}
+
+/* Room Card Styling */
+.room-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 35px;
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+    position: relative;
+    width: 1500px;  /* Increased width for the card */
+}
+
+/* Hover Effect for Room Cards */
+.room-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Room Name Styling */
+.room-name {
+    font-size: 30px;  /* Larger font for room name */
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* Image Styling */
+.room-image {
+    width: 100%;  /* Full width to make the image span the width of the card */
+    height: 300px;  /* Increased height for larger images */
+    object-fit: cover;
+    border-radius: 15px;
+    margin-top: 25px;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect for Images */
+.room-card:hover .room-image {
+    transform: scale(1.05);  /* Subtle zoom effect */
+}
+
+/* Room Info (Description) Styling */
+.room-info p {
+    font-size: 20px;
+    color: #666;
+    line-height: 1.6;
+    margin-top: 20px;
+}
+
+/* Styling for Emphasized Text */
+.room-info p em {
+    font-style: italic;
+    color: #888;
+}
+
+.room-info p strong {
+    font-weight: bold;
+    color: #333;
+}
+
+.room-info p u {
+    text-decoration: underline;
+    color: #555;
+}
+
+/* Styling for Buffet Area (Special Styling) */
+.room-card:last-child {
+    border: 2px solid #ff9a00;  /* Adding a border for Buffet Area */
+    background-color: #fff8e1;  /* Light yellow background for distinction */
+}
+
+.room-card:last-child .room-name {
+    color: #ff9a00;  /* Buffet area name in distinct color */
+    font-size: 28px;  /* Slightly smaller font size */
+}
+.book-now {
+    background: linear-gradient(135deg, #ff8a00, #e5dc2e);  /* Gradient background for richness */
+    color: white;
+    padding: 15px 30px;  /* Larger padding for a bigger button */
+    border: none;
+    cursor: pointer;
+    font-size: 18px;  /* Larger font size */
+    margin-top: 1px;
+    border-radius: 12px;  /* Smoother and more rounded edges */
+    position: relative;
+    left: 650px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Adds depth */
+    transition: all 0.3s ease;  /* Smooth transition effect */
+    z-index: 1000;
+  }
+  
+  .book-now:hover {
+    background: linear-gradient(135deg, #e5962e, #ff8a00);  /* Reverse gradient on hover */
+    transform: translateY(-3px);  /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);  /* Deeper shadow for the hover state */
+  }
+  
+  
+/* Responsive Design */
+@media (max-width: 768px) {
+    .room-types-container {
+        width: 90%;
+    }
+
+    .rooms-list {
+        gap: 20px;  /* Reduced gap for smaller screens */
+    }
+
+    .room-card {
+        width: 100%;  /* Full width for cards on smaller screens */
+        padding: 25px;  /* Reduced padding for small screens */
+    }
+
+    .room-name {
+        font-size: 24px;  /* Adjusted room name font size */
+    }
+
+    .room-info p {
+        font-size: 18px;  /* Adjusted paragraph font size */
+    }
+
+    .room-image {
+        height: 250px;  /* Adjusted image height for smaller screens */
+    }
+}

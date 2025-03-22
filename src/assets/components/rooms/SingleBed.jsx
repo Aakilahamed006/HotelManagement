@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./SingleBed.css";
+import NavBarUnique from "./NavBarUniqe";
+import { useNavigate } from "react-router-dom";
 
 const SingleBed = () => {
+  const navigate = useNavigate(); 
   const [singlebed, setSinglebed] = useState([]);
   const [showForm, setShowForm] = useState(false);
   const [editingRoomId, setEditingRoomId] = useState(null);
@@ -86,29 +89,29 @@ const SingleBed = () => {
   };
 
   return (
-    <div className="single-bed-container">
-
-
-    
-
+    <div className="singlebed-container-unique">
       <h1>Bed Rooms</h1>
-      <ul className="room-list">
+      <button className="all-bookings" onClick={()=>navigate("/Allbookings")}>  view  all Bookings</button>
+      <div className="home-container"> {/* ✅ Fixed Class Name */}
+      <NavBarUnique /> {/* Include Navbar */}
+      
+      <ul className="room-lists-unique">
+      
         {singlebed.length > 0 ? (
           singlebed.map((room) => (
-            <li key={room.roomId} className="room-card">
+            <li key={room.roomId} className="room-cards-unique">
               <img
                 src={room.roomPhoto ? `data:image/jpeg;base64,${room.roomPhoto}` : "default-image.jpg"}
                 alt="Room"
-                className="room-image"
+                className="room-images-unique"
               />
-
-              <div className="room-info">
+              <div className="room-infos-unique">
                 <p><strong>Type:</strong> {room.roomType}</p>
                 <p><strong>Price:</strong> ${room.roomPrice}</p>
+                <p><strong>Room Id:</strong> {room.roomId}</p>
               </div>
-
-              <div className="button-group">
-                <button className="edit-btn"
+              <div className="button-groups-unique">
+                <button className="edit-btns-unique"
                   onClick={() => {
                     setShowForm(true);
                     setEditingRoomId(room.roomId);
@@ -120,12 +123,10 @@ const SingleBed = () => {
                   }}>
                   Edit
                 </button>
-
-                <button className="remove-btn" onClick={() => handleRemove(room.roomId)}>
+                <button className="remove-btns-unique" onClick={() => handleRemove(room.roomId)}>
                   Remove
                 </button>
               </div>
-
               {showForm && editingRoomId === room.roomId && (
                 <RoomForm
                   newRoom={newRoom}
@@ -140,7 +141,7 @@ const SingleBed = () => {
           <p>Loading...</p>
         )}
       </ul>
-      <button className="add-room-btn" onClick={() => { setShowForm(true); setEditingRoomId(null); }}>
+      <button className="add-room-btns-unique" onClick={() => { setShowForm(true); setEditingRoomId(null); }}>
         ADD NEW ROOM
       </button>
       {showForm && editingRoomId === null && (
@@ -152,12 +153,12 @@ const SingleBed = () => {
         />
       )}
     </div>
-    
+    </div>
   );
 };
 
 const RoomForm = ({ newRoom, setNewRoom, handleSubmit, setShowForm }) => (
-  <form className="room-form" onSubmit={handleSubmit}>
+  <form className="room-forms-unique" onSubmit={handleSubmit}>
     <label>Room Type:</label>
     <input
       type="text"
@@ -165,7 +166,6 @@ const RoomForm = ({ newRoom, setNewRoom, handleSubmit, setShowForm }) => (
       onChange={(e) => setNewRoom({ ...newRoom, roomType: e.target.value })}
       required
     />
-
     <label>Room Price:</label>
     <input
       type="number"
@@ -173,7 +173,6 @@ const RoomForm = ({ newRoom, setNewRoom, handleSubmit, setShowForm }) => (
       onChange={(e) => setNewRoom({ ...newRoom, roomPrice: e.target.value })}
       required
     />
-
     <label>Room Photo:</label>
     <input
       type="file"
@@ -181,9 +180,8 @@ const RoomForm = ({ newRoom, setNewRoom, handleSubmit, setShowForm }) => (
       onChange={(e) => setNewRoom({ ...newRoom, roomPhoto: e.target.files[0] })}
       required
     />
-
-    <button type="submit" className="submit-btn">Submit</button>
-    <button type="button" className="cancel-btn" onClick={() => setShowForm(false)}>Cancel</button>
+    <button type="submit" className="submit-btns-unique">Submit</button>
+    <button type="button" className="cancel-btns-unique" onClick={() => setShowForm(false)}>Cancel</button>
   </form>
 );
 

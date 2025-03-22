@@ -1,0 +1,85 @@
+/* Container Styling */
+.availability-container {
+    width: 350px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .availability-container:hover {
+    transform: scale(1.02);
+  }
+  
+  /* Heading */
+  h2 {
+    margin-bottom: 15px;
+    color: #333;
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  /* Input Group */
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    text-align: left;
+  }
+  
+  label {
+    font-weight: 600;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border 0.3s;
+  }
+  
+  input:focus {
+    outline: none;
+    border: 1px solid #007bff;
+  }
+  
+  /* Button Styling */
+  button {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    width: 100%;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+  }
+  
+  button:hover {
+    background: linear-gradient(135deg, #0056b3, #003d80);
+    transform: scale(1.05);
+  }
+  
+  /* Error & Success Messages */
+  .error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  
+  .success {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    font-weight: bold;
+  }
+  

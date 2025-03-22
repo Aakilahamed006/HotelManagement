@@ -1,0 +1,120 @@
+/* Container for Room Availability */
+.room-availability-container {
+  width: 80%;
+  margin: 20px auto;
+  padding: 40px;
+  background-color: rgba(255, 255, 255, 0.8); /* Transparent white background for text visibility */
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: relative;
+  z-index: 1;
+}
+
+/* Full-screen background image for this component only */
+.room-availability-container::before {
+  content: "";
+  position: fixed; /* Covers the entire screen */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("/pexels-photo-258154.jpeg") no-repeat center center/cover;
+  z-index: -1; /* Keeps it behind the content */
+  opacity: 1; /* Adjust opacity for better readability */
+}
+
+/* Heading Style */
+.room-availability-container h2 {
+  font-size: 28px;
+  color: #f5f4ee;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
+/* Input Group Styling */
+.room-availability-container .input-group {
+  margin: 15px 0;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Input field styling */
+.room-availability-container .input-group label {
+  font-size: 16px;
+  color: #f3f2f0;
+  margin-right: 15px;
+  width: 25%;
+  text-align: left;
+}
+
+/* Date inputs styling */
+.room-availability-container .input-group input {
+  width: 70%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Error and Success message styling */
+.room-availability-container .error {
+  color: red;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.room-availability-container .success {
+  color: green;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+/* Button Styling */
+.room-availability-container button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.room-availability-container button:hover {
+  background-color: #0056b3;
+}
+
+.room-availability-container button:focus {
+  outline: none;
+}
+
+/* Responsive Styling for Smaller Screens */
+@media (max-width: 768px) {
+  .room-availability-container {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .room-availability-container .input-group {
+    flex-direction: column;
+  }
+
+  .room-availability-container .input-group label {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .room-availability-container .input-group input {
+    width: 100%;
+  }
+
+  .room-availability-container button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

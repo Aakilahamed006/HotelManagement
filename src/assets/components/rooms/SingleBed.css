@@ -1,136 +1,176 @@
 /* SingleBed.css */
 
-.single-bed-container {
-    width: 80%;
-    margin: auto;
-    text-align: center;
-  }
+/* Container for the entire component */
+.singlebed-container-unique {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  padding-top:60px; 
+}
+.singlebed-container-unique h1 {
+  color: #333;
+  text-align: center; /* Centers the heading text */
+  margin: 0; /* Removes any default margin */
+}
+/* Back button styling */
+.all-bookings {
+  padding: 10px 20px; /* Add padding for button size */
+  background-color: #ffc107; /* Yellow background */
+  color: white; /* White text color */
+  border: none;
+  border-radius: 5px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none; /* Remove underline from the link */
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth hover effect */
+}
+
+.all-bookings:hover {
+  background-color: #e0a800; /* Darker yellow on hover */
+  transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.all-bookings:focus {
+  outline: none; /* Remove outline on focus */
+  box-shadow: 0 0 0 2px rgba(255, 193, 7, 0.5); /* Add a subtle focus outline */
+}
+
+
+
+
+
+
+/* List of rooms */
+.room-lists-unique {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Room card */
+.room-cards-unique {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.room-cards-unique img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+/* Room information */
+.room-infos-unique {
+  flex-grow: 1;
+}
+
+.room-infos-unique p {
+  margin: 5px 0;
+  color: black;
+}
+
+/* Button group */
+.button-groups-unique {
+  display: flex;
+  gap: 10px;
+}
+
+.edit-btns-unique,
+.remove-btns-unique {
+  padding: 8px 16px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.edit-btns-unique:hover,
+.remove-btns-unique:hover {
+  background-color: #0056b3;
+}
+
+.add-room-btns-unique {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-room-btns-unique:hover {
+  background-color: #218838;
+}
+
+/* Room form */
+
+.room-forms-unique {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 15px;
+  width: 300px;
+  background-color: #f8f9fa; /* Light gray background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-family: Arial, sans-serif;
+ 
+
   
-  .add-room-btn {
-    margin-top: 20px;
-    padding: 15px 25px; /* Increased padding for a larger button */
-    background-color: #45a049; /* Green background color */
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 18px; /* Increased font size */
-    border-radius: 5px; 
-  }
-  
-  .add-room-btn:hover {
-    background-color: #45a049;
-    transform: scale(1.1); /* Increase button size on hover */
-  }
-  
-  .room-list {
-    list-style-type: none;
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: flex-start; /* Align items to the left */
-    padding: 0;
-    margin-left: 5px;
-  }
-  
-  .room-card {
-    display: flex;
-    align-items: center;
-    background-color: #fff;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px;
-    padding: 15px;
-    margin: 15px;
-    width: 100%;
-    
-  }
-  
-  .room-image {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-right:20px;
-  }
-  .room-info {
-    flex: 1;
-  }
-  .edit-btn,
-  .remove-btn {
-    width: 100px;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
-  }
-  
-  .edit-btn {
-    background-color: #f0ad4e;
-    color: white;
-  }
-  
-  .edit-btn:hover {
-    background-color: #ec971f;
-  }
-  
-  .remove-btn {
-    background-color: #d9534f;
-    color: white;
-  }
-  
-  .remove-btn:hover {
-    background-color: #c9302c;
-  }
-  
-  .room-form {
-    display: flex;
-    flex-direction: column;
-    background-color: #f9f9f9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 300px;
-    margin: auto;
-  }
-  
-  .room-form label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .room-form input {
-    margin-bottom: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .submit-btn {
-    background-color: #5bc0de;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .submit-btn:hover {
-    background-color: #31b0d5;
-  }
-  
-  .cancel-btn {
-    background-color: #aaa;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .cancel-btn:hover {
-    background-color: #888;
-  }
-  .button-group {
-    display: flex;
-    gap: 10px;
-  }
+
+}
+
+.room-forms-unique label {
+  font-weight: bold;
+  color: #333; /* Dark color for the label */
+}
+
+.room-forms-unique input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #333; /* Dark color for the input text */
+  background-color: #fff; /* White background for inputs */
+}
+
+.room-forms-unique input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.room-forms-unique button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.room-forms-unique button:hover {
+  background-color: #0056b3;
+}
+
+.room-forms-unique .cancel-btns {
+  background-color: #dc3545;
+}
+
+.room-forms-unique .cancel-btns:hover {
+  background-color: #c82333;
+}
+
