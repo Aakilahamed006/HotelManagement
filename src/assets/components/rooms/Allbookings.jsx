@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState,useEffect} from 'react';
+import "./Allbookings.css";
 const Allbookings=()=>{
 const [Allbookings,setAllbookings]=useState([]);
 useEffect(()=>{
@@ -11,7 +12,11 @@ useEffect(()=>{
 
 return (
     <div>
-      <h1>Bookings</h1>
+      <h4>Bookings</h4>
+      <button className="mbtn" onClick={() => window.location.href = "/SingleBed"}>Back</button>
+      <button className="mbtn" onClick={() => window.print()}>Print</button>
+      <button className="mbtn" onClick={() => window.location.reload()}>Refresh</button>
+      
       <table>
         <thead>
           <tr>
@@ -23,19 +28,23 @@ return (
             <th>Number of Adults</th>
             <th>Number of Children</th>
             <th>Total Guests</th>
+            <th>Booking confirmation code</th>
+            <th>Room Id</th>
           </tr>
         </thead>
         <tbody>
-          {Allbookings.map((booking,index) => (
-            <tr key={booking.bookingId|| index}>
+          {Allbookings.map((booking) => (
+            <tr key={booking.bookingId}>
               <td>{booking.bookingId}</td>
               <td>{booking.checkInDate}</td>
               <td>{booking.checkOutDate}</td>
               <td>{booking.guestFullName}</td>
               <td>{booking.guestEmail}</td>
-              <td>{booking.NumOfAdults}</td>
-              <td>{booking.NumOfChildren}</td>
-              <td>{booking.TotalNoGuest}</td>
+              <td>{booking.numOfAdults}</td>
+              <td>{booking.numOfChildren}</td>
+              <td>{booking.totalNoGuest}</td>
+              <td>{booking.bookingConfirmationCode}</td>
+              <td>{booking.roomId}</td>
             </tr>
           ))}
         </tbody>

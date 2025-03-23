@@ -44,7 +44,7 @@ const RoomTypes = () => {
           An <strong>all-you-can-eat buffet</strong> offering a variety of <em>international dishes</em> from around the world.
         </span>
       ),
-      image: "Deluxe-Room-at-The-Leela-Mumbai.jpg.webp",  // Replace with actual image path or URL
+      image: "full_dine (1).jpg",  // Replace with actual image path or URL
     },
   ];
 

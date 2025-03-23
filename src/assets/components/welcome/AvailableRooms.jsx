@@ -34,7 +34,7 @@ const AvailableRooms = () => {
           ))}
         </ul>
       ) : (
-        <p>No availability data to show.</p>
+        <><p>No Rooms Available in this date</p><button onClick={() => navigate("/room-availability")}>Try another date</button></>
       )}
     </div>
     </div>

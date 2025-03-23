@@ -1,0 +1,104 @@
+/* Container styling */
+.container {
+    max-width: 90%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Heading styling */
+h4 {
+    font-size: 36px; /* Increased font size */
+    color: black; /* Ensuring black text */
+    margin-bottom: 30px; /* More space below the heading */
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button styling */
+.mbtn {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 18px; /* Slightly larger */
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #de4638;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    margin: 2px 3px; /* Adds space above and below the button */
+}
+
+/* Button hover effects */
+.mbtn:hover {
+    background-color: #217dbb;
+    transform: scale(1.05);
+}
+
+/* Button click effect */
+.mbtn:active {
+    background-color: #1b6fa1;
+    transform: scale(0.98);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 30px; /* Adds spacing between the button and the table */
+}
+
+/* Table header styling */
+thead {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Table cells */
+th, td {
+    padding: 14px;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: black; /* Ensure black text */
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Row hover effect */
+tbody tr:hover {
+    background-color: #e6f7ff;
+    transition: 0.3s;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    table {
+        font-size: 14px;
+    }
+
+    th, td {
+        padding: 8px;
+    }
+
+    h1 {
+        font-size: 30px; /* Slightly smaller for smaller screens */
+    }
+
+    .mbtn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+}

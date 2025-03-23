@@ -11,6 +11,7 @@ import BookRoom from './assets/components/welcome/BookRoom.jsx';
 import { DateProvider } from './assets/components/welcome/DateContext.jsx';
 import RoomTypes from './assets/components/welcome/RoomTypes.jsx';
 import Allbookings from './assets/components/rooms/Allbookings.jsx';
+import Login from './assets/components/rooms/Login.jsx';
 function App() {
  
 
@@ -27,6 +28,7 @@ function App() {
         <Route path="/rooms" element={<RoomTypes />} />
         <Route path="/singlebed" element={<SingleBed />} />
         <Route path="/Allbookings" element={<Allbookings />} />
+        <Route path="/Login" element={<Login />} />
       </Routes>
     </Router>
     </DateProvider>
