@@ -74,18 +74,24 @@
 }
 
 /* Book Now Button */
-.book-now {
-    background: #FFD700;
-    color: black;
-    padding: 15px 30px;
-    font-size: 20px;
+.book-nows {
+    background: linear-gradient(135deg, #ff8a00, #e5dc2e);  /* Gradient background for richness */
+    color: white;
+    padding: 15px 30px;  /* Larger padding for a bigger button */
     border: none;
-    border-radius: 5px;
     cursor: pointer;
-    transition: transform 0.2s ease, background 0.3s;
+    font-size: 18px;  /* Larger font size */
+    margin-top: 1px;
+    border-radius: 12px;  /* Smoother and more rounded edges */
+    position: relative;
+    left:-10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08); /* Adds depth */
+    transition: all 0.3s ease;  /* Smooth transition effect */
+    z-index: 1000;
 }
 
-.book-now:hover {
-    background: #FFA500;
-    transform: scale(1.1);
+.book-nows:hover {
+    background: linear-gradient(135deg, #e5962e, #ff8a00);  /* Reverse gradient on hover */
+    transform: translateY(-3px);  /* Slight lift effect */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.1);  /* Deeper shadow for the hover state */
 }

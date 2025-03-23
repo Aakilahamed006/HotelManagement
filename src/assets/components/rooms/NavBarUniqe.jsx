@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./Navbar.css"; 
-const Navbar = () => {
+import "./NavBarUnique.css"; 
+const NavBarUnique = () => {
   return (
     <nav className="navbar">
       <ul className="nav-links">
@@ -15,4 +15,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBarUnique;

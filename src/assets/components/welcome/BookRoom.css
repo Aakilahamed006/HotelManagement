@@ -1,0 +1,57 @@
+/* Scoped styles only for .booking-form container */
+.booking-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: url("/pexels-photo-258154.jpeg") no-repeat center center/cover;
+    background-size: cover;
+}
+
+/* Apply styles only to the booking form itself */
+.booking-form {
+    background: rgba(207, 204, 204, 0.9); /* White with transparency */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    /* Make sure no other elements are affected by these styles */
+}
+
+.booking-form h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.booking-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.booking-form button {
+    background: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: 0.3s;
+    width: 100%;
+}
+
+.booking-form button:hover {
+    background: #0056b3;
+}
+
+@media (max-width: 600px) {
+    .booking-form {
+        width: 90%;
+        padding: 20px;
+    }
+}
